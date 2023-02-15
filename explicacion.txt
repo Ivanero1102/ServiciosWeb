@@ -1,0 +1,26 @@
+<----------GENERAL---------->
+
+! No usar includes ya que estan en servidores diferentes ¡
+
+<----------SOAP---------->
+
+
+
+<----------REST---------->
+
+Cuatro operaciones principales: Get / Post / Delete / Put
+
+Un cliente solicita una pagina a Servidor 1, Servidor 1 al faltarle la informacion de la BBDD, se la solicita a Servidor 2,
+este le devuelve la informacion y Servidor 1 la monta y se la manda a Cliente
+
+Cliente <--> Servidor 1 <---> Servidor 2
+
+Cliente --- http://localhost/formulario.php ---> Servidor 1 --- http://localhost/post.php ---> Servidor 2
+
+En Servidor 1 se aplica un json decode que coge la informacion del navegador, para mostrar la informacion proveniente de Servidor 2
+/* filegetcontent(url) sirve tambien para coger informacion del navegador */
+
+En Servidor 2 se realiza la peticion sql, se devuelve la informacion mediante el orange para devolver tosda la informacion o se filtra mediante ? sona = este, por ejemplo,
+tambien se puede hacer k la url introduza la informacion de manera dinamica
+
+La variable por $_GET se reciben en el Servidor 2, no en el servidor 1
